@@ -14,6 +14,6 @@ var MusicMaker = {
 		seq.loop = 0;
 		seq.start();
 		Tone.Transport.start();
+		// var loop = new Tone.Loop(seq, 1).start(0);
 	}
-
 }

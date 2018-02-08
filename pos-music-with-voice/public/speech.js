@@ -1,6 +1,5 @@
 	var myRec = new p5.SpeechRec(); // new P5.SpeechRec object
 
-
 	function setup()
 	{
 		// graphics stuff:
@@ -19,8 +18,11 @@
 	{
 		if(myRec.resultValue==true) {
 			background(192, 255, 192);
-			var text = document.getElementsByTagName('text-field');
-			text.innerHTML = myRec.resultString;
+			var textVis =  text(myRec.resultString, width/2, height/2);
+			// textBox.createDiv(textBox).addClass('text-field');
+			// var textBox = createDiv(myRec.resultString).addClass('text-field');
+			var textBox = document.getElementById('text-field');
+			textBox.innerHTML += myRec.resultString;
 			// text(myRec.resultString, width/2, height/2);
 			console.log(myRec.resultString);
 		}

@@ -9,7 +9,7 @@ function getPOS() {
 		}
 	})
 		.success(function(data) {
-			MusicMaker.play(data)
+			MusicMaker.play(data);
 		})
 		.fail(function(err) {
 			console.log(err)
